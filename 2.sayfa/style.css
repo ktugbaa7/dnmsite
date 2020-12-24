@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #f2f2f2;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+nav {
+    background: #222222;
+    padding: 10px 40px 10px 70px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li.logo {
+    flex: 1;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+nav ul div.items{
+    padding: 0 25px;
+    display: inline-flex;
+    
+}
+nav ul div.items a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 12px;
+    
+}
+nav ul div.items a:hover{
+    color: rgb(167, 54, 101);
+    
+}
+nav ul .search-icon{
+    height: 40px;
+    width: 240px;
+    display: flex;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+nav ul .search-icon .icon:hover {
+    background: #e6e6e6;
+
+}
+nav ul .search-icon .icon span{
+    color: #222222;
+    font-size: 18px;
+}
+nav ul li.btn {
+    font-size: 29px;
+    flex: 1;
+    padding: 0 40px;
+    display: none;
+}
+nav ul li.btn span{
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 1px solid #151515;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav ul li.btn span.show:before{
+    content: '\f00d';
+}
+
+@media screen and (max-width: 1052px){
+    nav{
+        padding: 10px 40px 10px 0px;
+    }
+    nav ul li.logo{
+        display: none;
+    }
+    nav ul div.items{
+        flex: 5;
+    }
+}
+@media screen and (max-width: 767px){
+    nav ul li.btn{
+        display: block;
+        
+    }
+    nav {
+        z-index: 1;
+        padding: 9px 40px 9px 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        
+    }
+    nav ul div.items {
+        z-index: -1;
+        position: fixed;
+        top: -220px;
+        right: 0;
+        width: 100%;
+        background: #222222;
+        display: inline-block;
+        transition: top 1s;  
+        opacity: 0; 
+    }
+    nav ul div.items.show{
+        
+        top: 60px;  
+        opacity: 1;
+    }
+    nav ul div.items li{
+        text-align: center;
+        line-height: 30px;
+        margin: 30px 0;
+    }
+    nav ul div.items li a{
+        font-size: 19px;
+        
+    }
+}
+
+.genisalan {
+    width: 100%;
+    height: 800px;
+    background-image: url(../2.sayfa/img/genisalan.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+.yazılar h1,h2{
+    text-transform: uppercase;
+    color: #000;
+}
+.genisalan2 {
+    width: 100%;
+    height: 700px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+        
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.yazılar {
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .genisalan, .genisalan2 {
+        height: 100%;
+        flex-direction: row;       
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer-content{
+        width: 100%;
+    }
+}
+footer {
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;	
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials a i{
+    font-size: 3rem;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: rgb(167, 54, 101);
+}
+footer .fa-facebook-square, .fa-twitter-square, .fa-google-plus, .fa-youtube, .fa-linkedin {
+    font-size: 48px;
+    color: rgb(164, 164, 165);
+    padding: 5px;
+}
+.footer-content ul.socials li a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+.footer-bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    background: #000;
+}
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #fff; 
+}
+.footer-bottom p span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
